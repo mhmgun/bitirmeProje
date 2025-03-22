@@ -1,0 +1,72 @@
+/* Sayfa genel ayarları */
+body {
+    background-color: green;  /* Arka planı yeşil yapıyoruz */
+    color: black;             /* Yazı rengini siyah yapıyoruz */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;  /* Sayfa yüksekliği tam ekran olsun */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* İçeriği ortalar */
+}
+
+.container {
+    text-align: center;
+}
+
+/* Animasyon için başlangıç ve bitiş ayarları */
+#merhaba {
+    font-size: 4em;  /* Başlık boyutunu büyütüyoruz */
+    position: relative;
+    animation: moveUp 2s ease-out forwards;  /* Animasyonu başlatıyoruz */
+    opacity: 0;  /* Başlangıçta görünürlük 0 */
+}
+
+#aciklama
+{
+    opacity: 0;
+    font-size: 1.5em;
+    position: relative;
+    animation: moveUp 2s ease-out forwards;  /* Animasyonu başlatıyoruz */
+
+}
+
+
+/* Buton stili */
+#button {
+    color: aliceblue;
+    opacity: 0;  /* Başlangıçta görünürlük 0 */
+    animation: moveUp 2s ease-out forwards;  /* Animasyonu başlatıyoruz */
+    padding: 20px 100px;
+    font-size: 1.2em;
+    background-color: rgb(7, 73, 70);
+    border: 2px solid rgb(96, 121, 105);
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: #142791;
+}
+
+/* Form stilini biraz güzelleştir */
+form {
+    font-size: 1.2em;
+    color: black;
+    margin-top: 10px;
+    text-align: left;
+    display: inline-block;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 1;  /* İlk başlangıçta görünür */
+        transform: translateY(0);  /* Başlangıçta yukarı kaymamış */
+    }
+    100% {
+        opacity: 1;  /* Görünürlük 1 (tam görünür) */
+        transform: translateY(-300px);  /* 100px yukarı kayacak */
+    }
+}
